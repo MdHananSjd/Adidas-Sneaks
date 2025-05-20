@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sneaker_shop/pages/home_page.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -6,7 +7,7 @@ class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white ,
+      backgroundColor: Colors.grey[300] ,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -45,33 +46,30 @@ class IntroPage extends StatelessWidget {
 
             const SizedBox(height: 100,),
             //Start now button
-            GestureDetector(
+            GestureDetector(    //On tapping this button, the user is routed to the homepage
               onTap: () => Navigator.push(
                 context, 
-                MaterialPageRoute(
-                  builder: (context) => HomePage(),
-                  )
-                )
+                MaterialPageRoute(builder:(context) => HomePage(),)
+              ),
               child: Container(
-                width: 300,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.grey[900]
-                ),
-                padding: EdgeInsets.all(25),
-                child: Center(
-                  child: const Text(
-                    "Shop Now",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.white
+                  width: 300,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey[900]
+                  ),
+                  padding: EdgeInsets.all(25),
+                  child: Center(
+                    child: Text(
+                      "Shop Now",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        color: Colors.white
+                      ),
                     ),
                   ),
                 ),
-              ),
-            )
-
+            ),
           ],
         ),
       ),
