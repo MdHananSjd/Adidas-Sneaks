@@ -11,7 +11,7 @@ class _ShopPageState extends State<ShopPage> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text("Shop Page\nComing Soon!"),
+      child: Text("Shopping Page, Coming soon!"),
     );
   }
 }
