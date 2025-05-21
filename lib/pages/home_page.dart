@@ -53,7 +53,14 @@ class _HomePageState extends State<HomePage> {
         )
       ),
 
-      drawer: Drawer(),
+      drawer: Drawer(
+        backgroundColor: Colors.grey[900],
+        child: Column(
+          children: [
+            //different tabs to add
+          ],
+        ),
+      ),
     );
   }
 }
