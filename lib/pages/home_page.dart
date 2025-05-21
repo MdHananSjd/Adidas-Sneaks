@@ -57,6 +57,11 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.grey[900],
         child: Column(
           children: [
+            //logo
+            DrawerHeader(child: Image.asset(
+              "lib/images/nike.png",
+              color: Colors.white,
+              ))
             //different tabs to add
           ],
         ),
