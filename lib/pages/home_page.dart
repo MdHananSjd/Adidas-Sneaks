@@ -13,7 +13,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   // Index to control the bottom navbar
-  // ignore: unused_field
   int _selectedIndex = 0;
 
   // Method to update the selected index when the user taps the nav bar
@@ -23,8 +22,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
   
-  // pages to display
-  // ignore: unused_field
+  // pages to display 
   final List<Widget> _pages =[
     const ShopPage(),
     const CartPage(),
@@ -35,12 +33,27 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.grey[300],
 
-      //First thing: Create Bottom navigation bar (Import google navbar)
       bottomNavigationBar: MyBottomNavBar(
         onTabChange: (index) => navigateBottomBar(index),
       ),
 
-      body: _pages[_selectedIndex], //Active Ticket: Tab switch non-functional. (fix on 21/05/2025)
+      body: _pages[_selectedIndex],
+
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        leading: Builder(builder: (context) => IconButton(
+          icon: Icon(
+            Icons.menu,
+            color: Colors.black,
+            ),
+          onPressed: () {
+            Scaffold.of(context).openDrawer(); //of method gets the closest scaffoldState. If not provided, it takes the current context and works with that
+          },
+          ),
+        )
+      ),
+
+      drawer: Drawer(),
     );
   }
 }
