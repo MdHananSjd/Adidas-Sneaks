@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sneaker_shop/components/shoe_tile.dart';
 
 class ShopPage extends StatefulWidget {
   const ShopPage({super.key});
@@ -55,7 +56,16 @@ class _ShopPageState extends State<ShopPage> {
                 ),),
             ],
           ),
-        )
+        ),
+
+        const SizedBox(height: 20,),
+
+        Expanded(child: ListView.builder(
+          itemBuilder:(context, index) {
+            return ShoeTile();
+            },
+          ),
+        ),
 
       ],
     );
