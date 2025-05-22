@@ -31,6 +31,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: Colors.grey[300],
 
       bottomNavigationBar: MyBottomNavBar(
@@ -56,16 +57,59 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(
         backgroundColor: Colors.grey[900],
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             //logo
-            DrawerHeader(child: Image.asset(
-              "lib/images/nike.png",
-              color: Colors.white,
-              ))
+            Column(
+              children: [
+                DrawerHeader( // child: Image.asset("lib/images/adidas_logo.png")
+              child: Image.asset(
+                "lib/images/adidas_logo.png",
+                width: 190,
+                color: Colors.white,
+                ),
+              ),
+            
+
             //different tabs to add
-          ],
+            const SizedBox(height: 50,),
+
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: ListTile(
+                leading: Icon(Icons.home, color: Colors.white, size: 30,),
+                title: Text("Home", style: TextStyle(color: Colors.white, fontSize: 18),),
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: ListTile(
+                leading: Icon(Icons.person, color: Colors.white, size: 30,),
+                title: Text("Profile", style: TextStyle(color: Colors.white, fontSize: 18),),
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: ListTile(
+                leading: Icon(Icons.settings, color: Colors.white, size: 30,),
+                title: Text("Settings", style: TextStyle(color: Colors.white, fontSize: 18),),
+              ),
+            ),
+
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom:20.0, left: 20.0),
+              child: ListTile(
+                leading: Icon(Icons.logout, color: Colors.red, size: 30,),
+                title: Text("Log Out", style: TextStyle(color: Colors.red, fontSize: 18),),
+              ),
+            ),
+            ],
+          ),
         ),
-      ),
     );
   }
 }
