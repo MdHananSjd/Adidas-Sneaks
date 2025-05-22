@@ -43,10 +43,14 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leading: Builder(builder: (context) => IconButton(
-          icon: Icon(
-            Icons.menu,
-            color: Colors.black,
-            ),
+          icon: Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: Icon(
+              Icons.menu,
+              color: Colors.black,
+              size: 30,
+              ),
+          ),
           onPressed: () {
             Scaffold.of(context).openDrawer(); //of method gets the closest scaffoldState. If not provided, it takes the current context and works with that
           },

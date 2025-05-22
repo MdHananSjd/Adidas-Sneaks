@@ -7,13 +7,14 @@ class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300] ,
+      backgroundColor: const Color.fromARGB(255, 253, 252, 252) ,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //logo
-            const SizedBox(height: 100,),
+            const SizedBox(height: 0,),
+
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: Image.asset(
@@ -21,14 +22,17 @@ class IntroPage extends StatelessWidget {
                 ),
             ),
 
-            const SizedBox(height: 30,),
+            const SizedBox(height: 80,),
         
             //Title
             Text(
-              "Just Do It!",
+              "IMPOSSIBLE IS NOTHING",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 30
+                fontSize: 35,
+                fontFamily: "sans-serif",
+                letterSpacing: -3.0,
+
               ),
             ),
 
@@ -43,7 +47,7 @@ class IntroPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
 
-            const SizedBox(height: 100,),
+            const SizedBox(height: 120,),
             //Start now button
             GestureDetector(    //On tapping this button, the user is routed to the homepage
               onTap: () => Navigator.push(
