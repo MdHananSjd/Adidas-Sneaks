@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.all(10.0),
               child: ListTile(
                 leading: Icon(Icons.home, color: Colors.white, size: 30,),
-                title: Text("Home", style: TextStyle(color: Colors.white, fontSize: 18),),
+                title: Text("Home", style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
               ),
             ),
 
@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.all(10.0),
               child: ListTile(
                 leading: Icon(Icons.person, color: Colors.white, size: 30,),
-                title: Text("Profile", style: TextStyle(color: Colors.white, fontSize: 18),),
+                title: Text("Profile", style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
               ),
             ),
 
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.all(10.0),
               child: ListTile(
                 leading: Icon(Icons.settings, color: Colors.white, size: 30,),
-                title: Text("Settings", style: TextStyle(color: Colors.white, fontSize: 18),),
+                title: Text("Settings", style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
               ),
             ),
 
@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.only(bottom:20.0, left: 20.0),
               child: ListTile(
                 leading: Icon(Icons.logout, color: Colors.red, size: 30,),
-                title: Text("Log Out", style: TextStyle(color: Colors.red, fontSize: 18),),
+                title: Text("Log Out", style: TextStyle(color: Colors.red, fontSize: 18, fontWeight: FontWeight.bold)),
               ),
             ),
             ],
