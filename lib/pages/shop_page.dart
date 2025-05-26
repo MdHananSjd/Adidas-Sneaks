@@ -65,7 +65,7 @@ class _ShopPageState extends State<ShopPage> {
           scrollDirection: Axis.horizontal,
           itemCount: 5,
           itemBuilder:(context, index) {
-            Shoe shoe = Shoe(name: "Samba OG's", price: "500 AED", imagepath: "lib/images/samba_og.png", description: "very naise beta");
+            Shoe shoe = Shoe(name: "Samba OG's", price: "500 AED", imagepath: "lib/images/samba_og.png", description: "very nice shoe");
             return ShoeTile(
               shoe: shoe,
             );
