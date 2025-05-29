@@ -10,8 +10,28 @@ class CartPage extends StatefulWidget {
 class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("Cart Page, Coming Soon!"),
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text(
+              "Cart",
+              style: TextStyle(
+                color: Colors.grey[900],
+              ),
+              ),
+            Text(
+              "Your Orders",
+              style: TextStyle(
+                color: Colors.grey[900],
+              ),
+              ),
+          ],
+        ),
+        const SizedBox(width: 20,),
+        
+      ],
     );
   }
 }

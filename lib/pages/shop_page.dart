@@ -73,6 +73,13 @@ class _ShopPageState extends State<ShopPage> {
           ),
         ),
 
+        Padding(
+          padding: const EdgeInsets.all(25),
+          child: Divider(
+            color: Colors.white,
+          ),
+        )
+
 
       ],
     );
